@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+body {
+  font-family: 'Montserrat';
+  background-image: url('img/work.jpeg'); /* Imagem de fundo */
+  background-size: cover; /* Redimensiona a imagem para caber na tela */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
+  height: 100vh; /* Ocupa a altura total da tela */
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+header {
+  margin-bottom: 20px; /* Espaçamento entre o header e o container */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remover margens do ul */
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+}
+
+nav li {
+  margin: 0 15px; /* Espaçamento horizontal entre os links */
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.container {
+  background-color: #464744;
+  padding: 25px;
+  border-radius: 60px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  width: 20%; /* Largura definida em porcentagem */
+  max-width: 400px; /* Máxima largura de 400px */
+  text-align: center;
+  opacity: 0.9;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #8f8b8b;
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+button {
+  padding: 2px;
+  border: none;
+  background-color: #8f8c8c7f;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+/* Estilos do modal */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 1; /* Fica acima de tudo */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largura completa */
+  height: 100%; /* Altura completa */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto transparente */
+}
+
+.modal-content {
+  margin: auto; /* Centraliza na tela */
+  padding: 40px; /* Aumenta o padding para maior espaço */
+  border: 1px solid #888;
+  width: 80%; /* Largura do conteúdo */
+  max-width: 800px; /* Máximo de 800px para a caixa modal */
+  border-radius: 10px;
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos de cor para cada categoria de IMC */
+.modal-content.underweight {
+  background-color: rgba(83, 83, 228, 0.54); /* Azul para underweight */
+  color: white; 
+}
+
+.modal-content.normal {
+  background-color: rgba(0, 128, 0, 0.711); /* Verde para normal */
+  color: white; 
+}
+
+.modal-content.overweight {
+  background-color: rgba(182, 128, 28, 0.726); /* Laranja para overweight */
+  color: white; 
+}
+
+.modal-content.obese {
+  background-color: rgba(178, 33, 33, 0.682); /* Vermelho para obese */
+  color: white; 
+}
+
+.modal-content.morbidly-obese {
+  background-color: rgba(0, 0, 0, 0.753); /* Preto para morbidly obese */
+  color: white; /* Texto branco */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  button {
+      padding: 8px;
+      font-size: 1rem;
+  }
+
+  input {
+      padding: 6px;
+      font-size: 0.7rem;
+  }
+
+  .container {
+      padding: 20px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+      max-width: 500px; 
+  }
+
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  button {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  input {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+      max-width: 1000px; 
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  button {
+      padding: 8px;
+      font-size: 15px;
+  }
+
+  input {
+      padding: 6px;
+      font-size: 12px;
+  }
+}
